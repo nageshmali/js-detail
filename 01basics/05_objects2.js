@@ -17,13 +17,13 @@ const secondUser = {
     }
 }
 
-console.log(secondUser);
-console.log(secondUser.fullName);
-console.log(secondUser.fullName?.userFullName);
+// console.log(secondUser);
+// console.log(secondUser.fullName);
+// console.log(secondUser.fullName?.userFullName);
 
 const comObj = {...myObj,...secondUser};
-console.log(comObj);
-console.log(Object.assign({},myObj,secondUser));
+// console.log(comObj);
+// console.log(Object.assign({},myObj,secondUser));
 
 //Return the array
 console.log(Object.keys(comObj));

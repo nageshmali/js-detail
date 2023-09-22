@@ -58,6 +58,7 @@ let n2 = 234
 let n3 = 236
 
 console.log(Array.of(n1,n2,n3));
+console.log(Array.from("Nagesh Mali"));
 
 
 

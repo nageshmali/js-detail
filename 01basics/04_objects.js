@@ -1,4 +1,7 @@
 
+//Two ways
+//1. From constructor - singleton
+//2. Literal - no singleton
 let mySym = "ha";
 
 const myObj = {
