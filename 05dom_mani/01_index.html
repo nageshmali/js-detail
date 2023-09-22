@@ -1,0 +1,41 @@
+
+<!-- //innerText - shows which is displayed
+//textContent - also shows content which is hidden due to some properties
+//innerHTML - shows whole also with HTML tags which is ind=side the element -->
+
+<!-- Node - wider term --even a comment,newline or tag is called as Node in document -->
+<!-- Element - Particular Element like h1 ,h2 ,tags -->
+<!-- Collection of Node got is called as NodeList
+and Collection of Elements got is called as HTML Collection. -->
+
+<!-- 
+NodeList - we can use forEach and arrayMethods ---- var[0].innerText
+HTMLCollection - first convert in Array Array.from() and then we can use forEach and arrayMethods -->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Manipulation</title>
+
+    <style>
+        body{
+            background-color: #212121;
+            color: #fff;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <div class="mainDiv">
+        <h1 id="heading" class="myClass">Hello, my name is Nagesh <span style="display: none;">Testing text</span>
+        </h1>
+        <p class="para">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nostrum rem possimus exercitationem, delectus magni laborum quos maiores velit accusantium cumque!</p>
+        <p class="para">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nostrum rem possimus exercitationem, delectus magni laborum quos maiores velit accusantium cumque!</p>
+
+    </div>
+</body>
+</html>

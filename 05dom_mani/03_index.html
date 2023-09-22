@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create New Element</title>
+</head>
+<body style="background-color: black;color: white;">
+    <h1>Lets create elements</h1>
+</body>
+
+<script>
+    const div = document.createElement('div');
+    div.className = "myDiv";
+    div.id = "myID";
+    div.style.backgroundColor = "red";
+    div.style.padding = "20px";
+
+    const text = document.createTextNode("Hello I am a div made with JS");
+
+    div.appendChild(text);
+
+    document.body.appendChild(div);
+
+</script>
+
+</html>
