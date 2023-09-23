@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Remove Image</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body{
+            background-color: black;
+            color: white;
+        }
+        img{
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Hello I am remove Image</h1>
+
+    <a href="https://www.google.com" target="_blank">Go to Google</a>
+
+    <ul id="images">
+        <li><img src="https://images.pexels.com/photos/3561339/pexels-photo-3561339.jpeg?auto=compress&cs=tinysrgb&w=200&lazy=load" alt="" id="photoshop"></li>
+
+        <li><img src="https://images.pexels.com/photos/3532549/pexels-photo-3532549.jpeg?auto=compress&cs=tinysrgb&w=200&lazy=load" alt="" id="normal"></li>
+    </ul>
+</body>
+
+<script>
+
+    // document.querySelector('#images').addEventListener('click',()=>{
+    //     console.log("Clicked the Images");
+    // },false)
+    
+    // document.querySelector('#photoshop').addEventListener('click',(e)=>{
+    //     console.log("Clicked photoshop");
+
+    //     // e.stopPropagation(); //NO Bubbling
+    // },false)
+
+    // 1.Bubbling - INNER to Outer - third parameter false(default)
+    // 2.Capturing - OUTER to Inner - third parameter true
+
+
+    
+    //Remove Image
+    document.querySelector('#images').addEventListener('click',(e)=>{
+        // console.log(e.target);
+
+        // e is Pointer Event
+        // e.target is img tag
+        // e.target.parentNode is li tag
+        e.target.parentNode.remove();
+    })
+
+
+</script>
+</html>

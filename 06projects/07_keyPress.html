@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KeyPress</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body{
+            background-color: black;
+            color: white;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        .container{
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            /* border: 2px solid red; */
+        }
+
+        #result{
+            font-size: 30px;
+            color: orange;
+            margin-top: 20px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Press any key to detect</h1>
+
+        <h2 id="result"></h2>
+    </div>
+
+    
+    <script>
+
+        const res = document.querySelector('#result');
+        // console.log(res);
+
+        window.addEventListener('keydown',(e)=>{
+            res.innerHTML = e.code;
+            // res.innerHTML = e.key;
+        })
+    </script>
+</body>
+</html>
