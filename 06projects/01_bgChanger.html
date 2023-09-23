@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BgChanger</title>
+
+    <style>
+
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        .container {
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            background-color: black;
+            color: white;
+        }
+        .main{
+            display: flex;
+            margin-top: 20px;
+        }
+
+        .box{
+            height: 100px;
+            width: 100px;
+            border: 1px solid #fff;
+            margin: 0px 20px;
+            cursor: pointer;
+        }
+
+        #red{
+            background-color: red;
+        }
+
+        #yellow{
+            background-color: yellow;
+        }
+
+        #blue{
+            background-color: blue;
+        }
+
+        #purple{
+            background-color: purple;
+        }
+
+        #cyan{
+            background-color: cyan;
+        }
+
+        #green{
+            background-color: green;
+        }
+
+        #brown{
+            background-color: brown;
+        }
+
+        #pink{
+            background-color: pink;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h2>Click the boxes to change the Background color.</h2>
+        <div class="main">
+            
+            <div class="box" id="red"></div>
+            <div class="box" id="yellow"></div>
+            <div class="box" id="blue"></div>
+            <div class="box" id="purple"></div>
+            <div class="box" id="cyan"></div>
+            <div class="box" id="green"></div>
+            <div class="box" id="brown"></div>
+            <div class="box" id="pink"></div>
+        </div>
+    </div>
+
+</body>
+
+<script>
+    const container = document.querySelector('.container');
+    // console.log(container);
+
+    const buttons = document.querySelectorAll('.box');
+    // console.log(buttons);
+
+    buttons.forEach((button)=>{
+        button.addEventListener('click',(e)=>{
+            container.style.backgroundColor = e.target.id;
+        })
+    })
+</script>
+
+</html>

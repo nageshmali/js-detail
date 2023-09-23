@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI Calculator</title>
+
+    <style>
+
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background-color: black;
+            color: white;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        .container{
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            /* border: 2px solid red; */
+        }
+
+        form{
+            /* border: 2px solid blue; */
+            display: flex;
+            flex-direction: column;
+            align-items:center ;
+            justify-content: center;
+        }
+
+        input{
+            margin-left: 10px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            font-size: 20px;
+        }
+        #weight{
+            margin-left: 15px;
+            
+        }
+        #result{
+            margin: 20px 20px;
+            font-size: 30px;
+            color: orange;
+        }
+
+        button{
+            font-size: 30px;
+            cursor: pointer;
+            padding: 5px 30px;
+            border-radius: 8px;
+        }
+
+        .ans{
+            display: flex;
+            flex-direction: column;
+            margin-top: 20px;
+            font-size: 20px;
+        }
+
+        .ansdiv{
+            margin: 5px 0;
+        }
+
+        #resultAns{
+            color: orange;
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+        <form action="">
+            <h3>Enter Height in cm <input type="number" name="" id="height"></h3>
+            <h3>Enter Weight in kg <input type="number" name="" id="weight"></h3>
+
+            <div id="result"></div>
+            <div id="resultAns"></div>
+
+            <button type="submit">Calculate</button>
+        </form>
+        <div class="ans">
+            <div class="ansdiv">Between 16 to 18.5 = Under Weight</div>
+            <div class="ansdiv">Between 18.5 to 25 = Normal</div>
+            <div class="ansdiv">Between 25 to 40 = Over Weight</div>
+        </div>
+    </div>
+</body>
+
+<script>
+
+    const form = document.querySelector('form');
+    // console.log(form);
+
+    form.addEventListener('submit',(e)=>{
+        e.preventDefault();
+
+        const height = document.querySelector('#height').value;
+        // console.log(height);
+
+        const weight = document.querySelector('#weight').value;
+        // console.log(weight);
+
+        const result = document.querySelector('#result');
+
+        const ans = (weight/((height*height)/10000)).toFixed(2);
+        // console.log(ans);
+
+        const resAns = document.querySelector('#resultAns');
+
+        if(ans >= 16 && ans <=18.5){
+            resAns.textContent = "Under Weight";
+            resAns.style.color = "red";
+        }
+        else if(ans > 18.5 && ans <25){
+            resAns.textContent = "Normal";
+            resAns.style.color = "lightgreen";
+        }
+        else if(ans >= 25 && ans <= 40){
+            resAns.textContent = "Over Weight";
+            resAns.style.color = "red";
+        }
+
+        
+
+        result.textContent = ans;
+
+    })
+
+
+</script>
+</html>
